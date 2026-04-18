@@ -64,18 +64,18 @@ export function Combo() {
           <div className="w-12 h-px bg-[#B8860B]/30 mx-auto mb-8" />
         </div>
 
-        {/* Grid de Produtos Individuais */}
+        {/* Grid de Produtos - Quinas RETAS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {products.map((product, i) => {
             const Icon = product.icon;
             return (
-              <div key={i} className={`flex flex-col h-full rounded-2xl p-8 reveal transition-all duration-500 ${
+              <div key={i} className={`flex flex-col h-full p-8 reveal transition-all duration-500 rounded-none ${
                   product.highlight 
-                  ? 'bg-[#0F172A] text-white ring-2 ring-[#B8860B] shadow-2xl' 
-                  : 'bg-white text-[#0F172A] border border-[#B8860B]/10 shadow-sm'
+                  ? 'bg-[#0F172A] text-white ring-1 ring-[#B8860B] shadow-2xl' 
+                  : 'bg-white text-[#0F172A] border border-[#B8860B]/20 shadow-sm'
                 }`}>
                   <div className="flex justify-between items-start mb-6">
-                    <div className={`p-3 rounded-lg ${product.highlight ? 'bg-[#B8860B]/20' : 'bg-[#FDF5E6]'}`}>
+                    <div className={`p-3 rounded-none ${product.highlight ? 'bg-[#B8860B]/10' : 'bg-[#FDF5E6]'}`}>
                       <Icon className="w-5 h-5 text-[#B8860B]" />
                     </div>
                     <span className="text-[10px] uppercase tracking-widest text-[#B8860B] font-bold">
@@ -103,13 +103,13 @@ export function Combo() {
                     <p className="text-2xl font-serif mb-4 text-[#B8860B]">R$ {product.price}</p>
                     <a 
                       href={product.link}
-                      className={`block text-center py-3 rounded-full text-[10px] uppercase tracking-widest font-bold transition-all ${
+                      className={`block text-center py-4 rounded-none text-[10px] uppercase tracking-widest font-bold transition-all ${
                         product.highlight 
                         ? 'bg-[#B8860B] text-white hover:bg-white hover:text-[#0F172A]' 
                         : 'bg-[#0F172A] text-white hover:bg-[#B8860B]'
                       }`}
                     >
-                      Comprar apenas este
+                      Comprar Individual
                     </a>
                   </div>
               </div>
@@ -117,33 +117,33 @@ export function Combo() {
           })}
         </div>
 
-        {/* Bloco do Combo Completo */}
-        <div className="max-w-3xl mx-auto text-center bg-[#0F172A] rounded-3xl p-10 md:p-16 relative overflow-hidden ring-4 ring-[#B8860B]/30 reveal">
+        {/* Bloco do Combo - Quinas Retas */}
+        <div className="max-w-4xl mx-auto text-center bg-[#0F172A] p-10 md:p-16 relative overflow-hidden border border-[#B8860B]/30 reveal rounded-none shadow-2xl">
           <div className="absolute top-0 right-0 p-4">
-            <span className="bg-[#B8860B] text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-tighter">
-              Oferta Recomendada
+            <span className="bg-[#B8860B] text-white text-[9px] font-bold px-4 py-1 uppercase tracking-widest">
+              Recomendado
             </span>
           </div>
           
-          <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Combo Mulher Estratégica</h2>
-          <p className="text-[#B8860B] text-sm mb-8 tracking-widest uppercase">Os 3 produtos pelo preço de um</p>
+          <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">Combo Mulher Estratégica</h2>
+          <p className="text-[#B8860B] text-sm mb-8 tracking-[0.2em] uppercase font-light">Os 3 produtos pelo preço de um</p>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
-            <span className="text-white/40 line-through text-xl">R$ 129,70</span>
-            <span className="text-white text-5xl md:text-6xl font-serif">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+            <span className="text-white/30 line-through text-2xl font-light">R$ 129,70</span>
+            <span className="text-white text-6xl md:text-7xl font-serif">
               R$ <span className="text-[#B8860B]">97,90</span>
             </span>
           </div>
 
           <a 
             href="https://hotmart.com/checkout/combo"
-            className="inline-block bg-[#B8860B] text-white px-12 py-5 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-[#0F172A] transition-all w-full md:w-auto"
+            className="inline-block bg-[#B8860B] text-white px-16 py-6 rounded-none text-xs font-bold uppercase tracking-[0.3em] hover:bg-white hover:text-[#0F172A] transition-all w-full md:w-auto border border-[#B8860B]"
           >
-            QUERO O COMBO COMPLETO — R$ 97,90
+            QUERO O COMBO COMPLETO
           </a>
           
-          <p className="text-white/40 text-[10px] mt-6 uppercase tracking-widest">
-            Acesso vitalício aos 3 ebooks &bull; Pagamento Seguro Hotmart
+          <p className="text-white/30 text-[9px] mt-8 uppercase tracking-[0.25em]">
+            Acesso vitalício &bull; Pagamento Seguro Hotmart
           </p>
         </div>
       </div>
