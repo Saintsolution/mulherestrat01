@@ -17,14 +17,14 @@ export const Hero = ({ vslWistiaId }: HeroProps) => {
         <div className="lg:col-span-5 reveal">
           <div className="flex items-center gap-4">
             <span className="editorial-rule w-10" />
-            <span className="label-eyebrow">Vol. I — A Masterclass</span>
+            <span className="label-eyebrow">Método de ALTO VALOR FEMININO</span>
           </div>
 
           <h1 className="mt-10 font-serif text-5xl leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-[5.5rem]">
-            Mulher
-            <br />
-            <span className="italic font-light text-ink/85">Estratégica</span>
-          </h1>
+  <span className="text-gold">Mulher</span>
+  <br />
+  <span className="italic font-light text-ink/85">Estratégica</span>
+</h1>
 
           <p className="mt-8 max-w-md font-serif text-xl italic text-ink/70 sm:text-2xl">
             A arte de ser escolhida por quem você escolheu.
